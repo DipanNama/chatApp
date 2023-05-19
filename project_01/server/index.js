@@ -21,7 +21,6 @@ const time = () => {
         minutes = `0${minutes}`
     }
     let time = `${hours}:${minutes} ${meridiem}`
-    // console.log(time)
     return time;
 }
 

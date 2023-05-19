@@ -49,15 +49,20 @@ form.addEventListener('submit', (e) => {
 })
 
 
-const name = prompt("Enter your name to join: ")
-socket.emit('new-user-joined',name)
+// Getting the username out of the URLparameters
+
+const data = window.location.search;
+const urlParams = new URLSearchParams(data);
+const name = urlParams.get('username');
+// const name = prompt("Enter your name to join: ");
+socket.emit('new-user-joined',name);
 
 socket.on('user-joined', name => {
     if(name === null){
         console.log("Error")
     }
     else{
-        append(`${name} joined the chat`, 'right', time())
+        append(`${name} joined the chat`, 'left', time())
     }
 })
 
@@ -66,7 +71,6 @@ socket.on('receive', data => {
         console.log("Error")
     }
     else{
-        // console.log(data.time)
         append(`${data.name}: ${data.message}`, 'left', data.time)  
     }
 })
