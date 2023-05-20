@@ -1,7 +1,7 @@
 // This is the Node server which will handle my socket.io connection
 
 import { Server } from "socket.io";
-const io = new Server(8000);
+const io = new Server();
 
 io.listen(8000)
 
