@@ -84,3 +84,5 @@
 //         append(`${name} has left the chat`, 'left', time())  
 //     }
 // })
+
+console.log("client file working");
