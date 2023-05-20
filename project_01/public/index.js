@@ -1,6 +1,8 @@
 // This is the Node server which will handle my socket.io connection
 
-const io = require('socket.io')(8000)
+import io from 'socket.io';
+
+io.listen(8000)
 
 const users = {};
 
