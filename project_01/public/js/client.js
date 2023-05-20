@@ -1,5 +1,5 @@
 
-const socket = io("",{ transports : ['websocket'] })
+// const socket = io("wss://chatapp-prod.up.railway.app",{ transports : ['websocket'] })
 
 const form = document.getElementById("send-container")
 const messageInput = document.getElementById("messageInput")
