@@ -1,4 +1,5 @@
-const socket = io('http://localhost:8000',{ transports : ['websocket'] })
+
+const socket = io("https://chatapp-production-1db7.up.railway.app/",{ transports : ['websocket'] })
 
 const form = document.getElementById("send-container")
 const messageInput = document.getElementById("messageInput")
